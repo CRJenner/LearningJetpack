@@ -7,26 +7,26 @@ import androidx.navigation.compose.composable
 
 @Composable
 fun SetUpNavGraph(navController: NavHostController){
-NavHost(navController = navController, startDestination = Screen.SelfieCamera.route){
-    composable(
-        route  = Screen.Home.route
-    ){
-        Home(navController = navController)
-    }
+NavHost(navController = navController, startDestination = Screen.FaceMatch.route){
     composable(
         route  = Screen.ImagePicker.route
     ){
         ImagePicker(navController = navController)
     }
     composable(
-        route  = Screen.SelfieCamera.route
+        route  = Screen.FaceMatch.route
     ){
-        CameraView(navController = navController)
+        FaceMatch(navController = navController)
     }
     composable(
         route = Screen.Verification.route
     ){
         Verification(navController = navController)
     }
-        }
+    composable(
+        route = Screen.IDCamera.route
+    ){
+        IDCamera(navController = navController)
+    }
+}
 }
